@@ -13,5 +13,15 @@ def encrypt(original_text, shift_amount):
         cipher_text += alphabet[shifted_position] # j
 
     print(f"Here is the encoded result: {cipher_text}")
+def decrypt(original_text, shift_amount):
+    output_text= ""
 
-encrypt(original_text=text, shift_amount=shift)
+    for letter in original_text:
+        shifted_position = alphabet.index(letter) - shift_amount 
+
+        shifted_position %= len(alphabet) # 0 - 25
+        output_text += alphabet[shifted_position] # j
+
+    print(f"Here is the encoded result: {output_text}")
+decrypt(original_text=text, shift_amount=shift)
+#encrypt(original_text=text, shift_amount=shift)

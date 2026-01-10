@@ -36,7 +36,5 @@ def ceasars(original_text, shift_amount, encode_or_decode):
         shifted_position %= len(alphabet) 
         output_text += alphabet[shifted_position] 
 
-    print(f"Here is the encoded result: {output_text}")
-
-decrypt(original_text=text, shift_amount=shift)
-#encrypt(original_text=text, shift_amount=shift)
+    print(f"Here is the {encode_or_decode}d result: {output_text}")
+ceasars(original_text=text, shift_amount=shift, encode_or_decode=direction)
